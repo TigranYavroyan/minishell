@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:19:21 by healeksa          #+#    #+#             */
-/*   Updated: 2025/01/16 15:19:22 by healeksa         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:43:05 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ bool	remove_quotes(t_minishell_ptr minishell)
 		__err_msg_prmt__(NULL, "Unclosed quotes", SYNTAX_ERROR);
 		return (false);
 	}
-	parse_dollar(minishell);
 	curr = minishell->line->head;
 	while (curr)
 	{
