@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tigran <tigran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 18:01:10 by tyavroya          #+#    #+#             */
-/*   Updated: 2024/11/14 21:19:29 by tigran           ###   ########.fr       */
+/*   Created: 2025/01/16 15:16:18 by healeksa          #+#    #+#             */
+/*   Updated: 2025/01/16 15:16:19 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	is_whitespace(const char ch)
 {
-	return (ch == '\t' || ch == ' ' || ch == '\v'
-		|| ch == '\n' || ch == '\f' || ch == '\r');
+	return (ch == '\t' || ch == ' ' || ch == '\v' || ch == '\n' || ch == '\f'
+		|| ch == '\r');
 }
 
 int	ft_atoi(const char *str)

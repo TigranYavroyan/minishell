@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helpers.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tigran <tigran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/12 19:43:10 by tigran            #+#    #+#             */
-/*   Updated: 2024/11/17 16:06:06 by tigran           ###   ########.fr       */
+/*   Created: 2025/01/16 15:11:59 by healeksa          #+#    #+#             */
+/*   Updated: 2025/01/16 15:11:59 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	auto_free(char **ptr)
 
 int	ft_open(char *path, int flags, int permisson)
 {
-	int				fd;
+	int	fd;
 
 	fd = open(path, flags, permisson);
 	if (fd < 0)
