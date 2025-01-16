@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:18:36 by healeksa          #+#    #+#             */
-/*   Updated: 2025/01/16 15:18:36 by healeksa         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:18:04 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,10 @@ char	*path_resolve(t_command_ptr command)
 	{
 		path = option_check(command);
 		if (path)
+		{
+			ft_putendl_fd(path, STDOUT_FILENO);
 			return (path);
+		}
 		else
 			return (NULL);
 	}
