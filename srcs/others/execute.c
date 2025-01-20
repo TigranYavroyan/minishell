@@ -6,7 +6,7 @@
 /*   By: tyavroya <tyavroya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:50:43 by tyavroya          #+#    #+#             */
-/*   Updated: 2024/11/20 19:20:33 by tyavroya         ###   ########.fr       */
+/*   Updated: 2025/01/20 16:22:39 by tyavroya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@ static void	redir_checker(t_cmd_matrix_ptr commands, int i, bool *exec_flag,
 		*exec_flag = heredoc_handle(commands->cmds[i], fds, i);
 		restore_std_files_end(old_fds);
 		free(old_fds);
+		if (commands->cmds[i]->name && *(commands->cmds[i]->name) == '\0')
+		{
+			*exec_flag = false;
+			set_status_unsigned(VAL_CMD);
+		}
 	}
 	if ((commands->cmds[i]->redirection & redirect_out) == redirect_out)
 		dup2(commands->cmds[i]->descriptors->stdout, STDOUT_FILENO);
