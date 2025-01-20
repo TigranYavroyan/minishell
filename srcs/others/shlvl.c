@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   shlvl.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyavroya <tyavroya@student.42.fr>          +#+  +:+       +#+        */
+/*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 20:00:11 by healeksa          #+#    #+#             */
-/*   Updated: 2025/01/20 21:15:59 by tyavroya         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:20:01 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,18 @@ static void	__shlvl_if_body(t_treenode_ptr found, t_treenode_ptr found2)
 	level = level_check(found->value);
 	if (level == 1000)
 	{
+		free(found->value);
+		free(found2->value);
 		found->value = ft_strdup("");
 		found2->value = ft_strdup("");
 	}
 	else
 	{
+		free(found->value);
+		free(found2->value);
 		found->value = ft_itoa(level);
 		found2->value = ft_itoa(level);
 	}
-	free(found->value);
-	free(found2->value);
 }
 
 void	shlvl_process(t_minishell_ptr minishell)
