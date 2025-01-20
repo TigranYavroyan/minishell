@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tyavroya <tyavroya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:13:31 by healeksa          #+#    #+#             */
-/*   Updated: 2025/01/16 15:13:32 by healeksa         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:26:19 by tyavroya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	ft_env(t_command_ptr command)
 {
 	if (!empty_lt(command->options))
 		__err_msg_full__("env: ", "illegal option: ",
-			command->options->head->val, CMD_NOT_FOUND);
+			command->options->head->val, INV_ARG);
 	else if (!empty_lt(command->args))
 		__err_msg_full__("env: ", command->args->head->val,
-			": No such file or directory", INV_ARG);
+			": No such file or directory", CMD_NOT_FOUND);
 	else
 		traverse_bst(command->minishell->env, INORDER, NULL);
 }
