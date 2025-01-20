@@ -6,7 +6,7 @@
 /*   By: tyavroya <tyavroya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 21:20:42 by healeksa          #+#    #+#             */
-/*   Updated: 2024/11/20 18:15:19 by tyavroya         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:32:09 by tyavroya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ bool	heredoc_handle(t_command_ptr command, int *fds, int i)
 		fd = fds[out];
 	else
 		fd = command->descriptors->stdin;
-	run_signals(4);
+	run_signals(3);
 	while (1)
 	{
 		line = readline("> ");

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   signal_handle.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tyavroya <tyavroya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:20:18 by healeksa          #+#    #+#             */
-/*   Updated: 2025/01/16 15:20:19 by healeksa         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:32:19 by tyavroya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	run_signals(int mode)
 		signal(SIGINT, ctrl_c);
 		signal(SIGQUIT, back_slash);
 	}
-	if (mode == 4)
+	if (mode == 3)
 	{
 		signal(SIGINT, sig_handler_hdoc);
 		signal(SIGQUIT, SIG_IGN);
