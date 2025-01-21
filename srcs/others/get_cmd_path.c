@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 20:08:30 by tyavroya          #+#    #+#             */
-/*   Updated: 2024/11/19 00:06:07 by healeksa         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:39:59 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ bool	access_cmd(t_command_ptr command)
 	struct stat	info;
 	int			status;
 
+	ft_memset(&info, 0, sizeof(info));
 	__attribute__((cleanup(auto_free))) char *exec_path;
 	status = stat(command->name, &info);
 	exec_path = NULL;
